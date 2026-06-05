@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — CreatorForge</title>
+  <meta name="description" content="Ready to start your creator journey? Book a free strategy call or send us a message." />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23ff4d00'/><text y='.9em' font-size='70' x='12'>⚡</text></svg>" />
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-logo">
+    <div class="nav-logo-mark">⚡</div>
+    <span class="nav-logo-text">Creator<span>Forge</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="mentorship.html">Mentorship</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+    <li><a href="contact.html" class="nav-cta">Get Started →</a></li>
+  </ul>
+  <button class="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="page-hero">
+  <div class="hero-bg">
+    <div class="hero-bg-orb hero-bg-orb-1"></div>
+    <div class="hero-bg-grid"></div>
+  </div>
+  <div class="section-label" style="justify-content:center;">Let's Talk</div>
+  <h1>Get in <span style="color:var(--accent)">Touch</span></h1>
+  <p>Book a free 30-minute strategy call or send us a message. We respond within 24 hours — usually much faster.</p>
+</div>
+
+<!-- CONTACT SECTION -->
+<section style="background:var(--dark);">
+  <div class="contact-grid">
+    <div class="contact-info">
+      <div>
+        <div class="section-label">Reach Out</div>
+        <h2 class="section-title" style="font-size:clamp(28px,3vw,44px);">We'd Love to<br><span class="accent">Hear From You</span></h2>
+        <p style="color:var(--white-dim);font-size:15px;line-height:1.7;margin-top:12px;">
+          Tell us where you are in your creator journey and what you're trying to build. Even if you're not sure which service you need — we'll figure it out together on a free call.
+        </p>
+      </div>
+
+      <div class="contact-item reveal">
+        <div class="contact-icon">📧</div>
+        <div>
+          <h4>Email Us</h4>
+          <p><a href="mailto:hello@creatorforge.co" style="color:var(--accent);text-decoration:none;">hello@creatorforge.co</a></p>
+        </div>
+      </div>
+
+      <div class="contact-item reveal">
+        <div class="contact-icon">📞</div>
+        <div>
+          <h4>Book a Strategy Call</h4>
+          <p>Free 30-minute call. No commitment. Just a real conversation about your creator goals.</p>
+        </div>
+      </div>
+
+      <div class="contact-item reveal">
+        <div class="contact-icon">⏱️</div>
+        <div>
+          <h4>Response Time</h4>
+          <p>We respond to all inquiries within 24 hours, Monday–Saturday.</p>
+        </div>
+      </div>
+
+      <div class="contact-item reveal">
+        <div class="contact-icon">🌍</div>
+        <div>
+          <h4>We Work Worldwide</h4>
+          <p>Creators from the US, UK, India, UAE, Australia, and 30+ countries trust us.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form reveal">
+      <div style="margin-bottom:32px;">
+        <h3 style="font-family:var(--font-display);font-size:22px;font-weight:700;margin-bottom:8px;">Send Us a Message</h3>
+        <p style="color:var(--white-dim);font-size:14px;">Fill out the form and we'll get back to you within 24 hours.</p>
+      </div>
+      <form id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" placeholder="John" required />
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Doe" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="john@example.com" required />
+        </div>
+        <div class="form-group">
+          <label for="service">What are you interested in?</label>
+          <select id="service" name="service">
+            <option value="">Select a service...</option>
+            <option value="mentorship">Full Mentorship Program</option>
+            <option value="video">Video Editing</option>
+            <option value="seo">SEO Optimization</option>
+            <option value="brands">Brand Deals</option>
+            <option value="affiliate">Affiliate Products</option>
+            <option value="branding">Personal Branding</option>
+            <option value="all">Full Package (All Services)</option>
+            <option value="unsure">Not Sure — Need Advice</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="followers">Current follower count</label>
+          <select id="followers" name="followers">
+            <option value="">Select range...</option>
+            <option value="0">0 (Just starting)</option>
+            <option value="1k">1 – 1,000</option>
+            <option value="10k">1,000 – 10,000</option>
+            <option value="50k">10,000 – 50,000</option>
+            <option value="100k">50,000 – 100,000</option>
+            <option value="100k+">100,000+</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Tell us about your goals</label>
+          <textarea id="message" name="message" placeholder="What do you want to achieve? What's your niche? What's holding you back?" rows="5"></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="width:100%;justify-content:center;">
+          Send Message →
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="section-header" style="text-align:center;">
+    <div class="section-label" style="justify-content:center;">Quick Answers</div>
+    <h2 class="section-title">Common <span class="accent">Questions</span></h2>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:900px;margin:0 auto;">
+    <div class="value-card reveal" style="flex-direction:column;gap:10px;align-items:flex-start;">
+      <h4 style="font-family:var(--font-display);">How do I get started?</h4>
+      <p style="color:var(--white-dim);font-size:14px;">Fill out the form above or book a free strategy call. We'll chat, understand your goals, and recommend the right plan for you.</p>
+    </div>
+    <div class="value-card reveal" style="flex-direction:column;gap:10px;align-items:flex-start;">
+      <h4 style="font-family:var(--font-display);">Is there a contract?</h4>
+      <p style="color:var(--white-dim);font-size:14px;">No long-term contracts. Our services are month-to-month and you can cancel anytime. We earn your business every single month.</p>
+    </div>
+    <div class="value-card reveal" style="flex-direction:column;gap:10px;align-items:flex-start;">
+      <h4 style="font-family:var(--font-display);">Do you offer refunds?</h4>
+      <p style="color:var(--white-dim);font-size:14px;">We offer a 7-day satisfaction guarantee on all plans. If you're not happy in the first week, we'll give you a full refund, no questions asked.</p>
+    </div>
+    <div class="value-card reveal" style="flex-direction:column;gap:10px;align-items:flex-start;">
+      <h4 style="font-family:var(--font-display);">How many clients do you take?</h4>
+      <p style="color:var(--white-dim);font-size:14px;">We keep our roster intentionally small to maintain quality. We typically work with 40–60 active clients. Spots can be limited.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="../index.html" class="nav-logo">
+        <div class="nav-logo-mark">⚡</div>
+        <span class="nav-logo-text">Creator<span>Forge</span></span>
+      </a>
+      <p>The full-service creator agency that builds influencers from scratch.</p>
+      <div class="footer-socials">
+        <a href="#" class="social-link">▶</a>
+        <a href="#" class="social-link">◈</a>
+        <a href="#" class="social-link">♪</a>
+        <a href="#" class="social-link">✦</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="services.html#video">Video Editing</a></li>
+        <li><a href="services.html#seo">SEO Optimization</a></li>
+        <li><a href="services.html#brands">Brand Deals</a></li>
+        <li><a href="services.html#affiliate">Affiliate Products</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="mentorship.html">Mentorship</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:hello@creatorforge.co">hello@creatorforge.co</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 <span>CreatorForge</span>. All rights reserved.</p>
+    <p>Built for creators, by creators.</p>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
