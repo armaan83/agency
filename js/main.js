@@ -77,20 +77,31 @@ document.querySelectorAll('[data-count]').forEach(el => counterObserver.observe(
 
 // ─── CONTACT FORM ───
 const contactForm = document.getElementById('contactForm');
-contactForm?.addEventListener('submit', (e) => {
+contactForm?.addEventListener('submit', async (e) => {
   e.preventDefault();
   const btn = contactForm.querySelector('button[type="submit"]');
   const original = btn.textContent;
+
+  // Play animation first
   btn.textContent = 'Sending...';
   btn.disabled = true;
+
+  // Collect form data and send to Formsubmit
+  const data = new FormData(contactForm);
+  await fetch('https://formsubmit.co/ajax/YOUR@EMAIL.COM', {
+    method: 'POST',
+    headers: { 'Accept': 'application/json' },
+    body: data
+  });
+
+  // Show success animation
+  btn.textContent = '✓ Message Sent!';
+  btn.style.background = 'var(--green)';
+  contactForm.reset();
+
   setTimeout(() => {
-    btn.textContent = '✓ Message Sent!';
-    btn.style.background = 'var(--green)';
-    contactForm.reset();
-    setTimeout(() => {
-      btn.textContent = original;
-      btn.disabled = false;
-      btn.style.background = '';
-    }, 3000);
-  }, 1200);
+    btn.textContent = original;
+    btn.disabled = false;
+    btn.style.background = '';
+  }, 3000);
 });
