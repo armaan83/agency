@@ -1247,3 +1247,50 @@ footer {
     height: 54px;
   }
 }
+/* ─── STATS GRID ─── */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .path-steps::before {
+    left: 27px;
+  }
+
+  .path-step {
+    gap: 16px;
+  }
+
+  .path-step-dot {
+    width: 54px;
+    height: 54px;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+
+  .path-step-content {
+    padding: 20px;
+  }
+
+  .path-tags {
+    gap: 6px;
+  }
+
+  .path-tag {
+    font-size: 10px;
+    padding: 3px 10px;
+  }
+}
