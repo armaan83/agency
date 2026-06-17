@@ -1341,3 +1341,36 @@ footer {
     letter-spacing: 1px !important;
   }
 }
+/* ─── FORCED FIX: INDEX + MENTORSHIP MOBILE TEXT ─── */
+@media (max-width: 480px) {
+
+  /* FIX: Index page "We Build Influencers From Scratch." */
+  .hero .hero-content h1 {
+    font-size: 28px !important;
+    letter-spacing: -0.5px !important;
+    line-height: 1.2 !important;
+    word-break: break-word !important;
+  }
+  .hero .hero-content {
+    padding-right: 12px !important;
+    padding-left: 4px !important;
+  }
+
+  /* FIX: Mentorship page "Creator Mentorship" */
+  .page-hero h1 {
+    font-size: 28px !important;
+    letter-spacing: -1px !important;
+    line-height: 1.2 !important;
+    word-break: break-word !important;
+  }
+  .page-hero {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  
+  /* FIX: Mentorship page "Start From Zero" label */
+  .page-hero .section-label {
+    font-size: 11px !important;
+    letter-spacing: 1px !important;
+  }
+}
