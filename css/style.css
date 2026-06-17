@@ -33,6 +33,13 @@ body {
   line-height: 1.6;
 }
 
+/* ─── GLOBAL IMAGE SAFETY ─── */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* ─── NOISE OVERLAY ─── */
 body::before {
   content: '';
@@ -1162,6 +1169,44 @@ footer {
   .values-grid { grid-template-columns: 1fr; }
   .contact-form { padding: 28px; }
   .page-hero { padding: 120px 24px 50px; }
+  
+  /* ─── FIX: MENTORSHIP PAGE STACKING ─── */
+  .page-hero {
+    overflow: hidden; /* Prevents background orbs from causing scroll */
+  }
+
+  .path-steps::before {
+    left: 27px;
+  }
+
+  /* THIS IS THE MAIN FIX: Stack dot on top of text */
+  .path-step {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+  }
+
+  /* Make sure the text block takes full width */
+  .path-step-content {
+    width: 100% !important;
+    padding: 20px !important;
+  }
+
+  .path-step-dot {
+    width: 54px;
+    height: 54px;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+
+  .path-tags {
+    gap: 6px;
+  }
+
+  .path-tag {
+    font-size: 10px;
+    padding: 3px 10px;
+  }
 }
 /* ─── WHATSAPP FLOAT ─── */
 .whatsapp-float {
@@ -1264,33 +1309,5 @@ footer {
 @media (max-width: 768px) {
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .path-steps::before {
-    left: 27px;
-  }
-
-  .path-step {
-    gap: 16px;
-  }
-
-  .path-step-dot {
-    width: 54px;
-    height: 54px;
-    font-size: 18px;
-    flex-shrink: 0;
-  }
-
-  .path-step-content {
-    padding: 20px;
-  }
-
-  .path-tags {
-    gap: 6px;
-  }
-
-  .path-tag {
-    font-size: 10px;
-    padding: 3px 10px;
   }
 }
