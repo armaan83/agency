@@ -1387,3 +1387,20 @@ footer {
     z-index: 1003 !important;
   }
 }
+/* ─── FINAL FIX: MOBILE MENU HIDING "HOME" ─── */
+@media (max-width: 768px) {
+  /* Force the menu overlay ABOVE the navigation bar */
+  .nav-links {
+    z-index: 1002 !important;
+  }
+  
+  /* Keep the hamburger button ABOVE the menu so it stays clickable */
+  .hamburger {
+    z-index: 1003 !important;
+  }
+  
+  /* Safety: Make sure the nav bar itself doesn't clip the menu */
+  nav {
+    overflow: visible !important;
+  }
+}
