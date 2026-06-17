@@ -1329,3 +1329,15 @@ footer {
     word-break: break-all;
   }
 }
+/* ─── MENTORSHIP PAGE MOBILE FIX ─── */
+@media (max-width: 480px) {
+  .page-hero h1 {
+    font-size: clamp(30px, 10vw, 38px) !important;
+    letter-spacing: -1px !important;
+  }
+  
+  .page-hero .section-label {
+    font-size: 11px !important;
+    letter-spacing: 1px !important;
+  }
+}
