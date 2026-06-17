@@ -1404,3 +1404,54 @@ footer {
     overflow: visible !important;
   }
 }
+/* ─── FORCE FIX: SHOW ALL MOBILE MENU LINKS ─── */
+@media (max-width: 768px) {
+  /* Make sure the nav itself doesn't clip the menu */
+  nav {
+    overflow: visible !important;
+  }
+
+  /* Force the menu overlay to take full height and scroll if needed */
+  .nav-links.open {
+    display: flex !important;
+    height: 100vh !important;
+    min-height: 100vh !important;
+    max-height: none !important;
+    overflow-y: auto !important;
+    padding: 80px 24px 40px !important; /* Add padding so items don't touch edges */
+    gap: 24px !important;
+  }
+
+  /* Force every single list item to be visible */
+  .nav-links.open li {
+    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Force every single link to be visible and readable */
+  .nav-links.open li a {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    font-size: 24px !important;
+    color: var(--white) !important;
+    padding: 8px 0 !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  /* Make sure the active link still stands out */
+  .nav-links.open li a.active {
+    color: var(--accent) !important;
+  }
+
+  /* Keep the hamburger button clickable above everything */
+  .hamburger {
+    z-index: 1003 !important;
+  }
+}
