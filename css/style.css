@@ -1374,3 +1374,16 @@ footer {
     letter-spacing: 1px !important;
   }
 }
+/* ─── FIX: MOBILE MENU HIDING "HOME" ─── */
+@media (max-width: 768px) {
+  /* 1. Raise the menu above the navigation bar */
+  .nav-links {
+    z-index: 1002 !important;
+    overflow-y: auto !important; /* Safety net if menu gets too long */
+  }
+  
+  /* 2. Keep the hamburger button above the menu */
+  .hamburger {
+    z-index: 1003 !important;
+  }
+}
