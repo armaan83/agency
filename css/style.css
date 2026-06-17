@@ -1311,3 +1311,21 @@ footer {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+/* ─── ABOUT PAGE MOBILE FIXES ─── */
+@media (max-width: 768px) {
+  /* Fix stats cards padding on mobile */
+  .stats-grid .service-card {
+    padding: 24px 16px !important;
+  }
+
+  /* Make sure stats numbers wrap if they're too long */
+  .stats-grid [data-count] {
+    font-size: 32px !important;
+    word-break: break-word;
+  }
+
+  /* Fix any footer email overflow */
+  .footer-col ul li a {
+    word-break: break-all;
+  }
+}
