@@ -88,7 +88,7 @@ contactForm?.addEventListener('submit', async (e) => {
 
   // Collect form data and send to Formsubmit
   const data = new FormData(contactForm);
-  await fetch('https://formsubmit.co/ajax/malek.cityofchicago@gmail.com', {
+  await fetch('https://formsubmit.co/ajax/gmoverseaz@gmail.com', {
     method: 'POST',
     headers: { 'Accept': 'application/json' },
     body: data
