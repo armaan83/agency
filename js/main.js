@@ -82,6 +82,48 @@ contactForm?.addEventListener('submit', async (e) => {
   const btn = contactForm.querySelector('button[type="submit"]');
   const original = btn.textContent;
 
+  // Disable button and show loading state
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+
+  try {
+    const data = new FormData(contactForm);
+    const response = await fetch('https://formsubmit.co/ajax/gmoverseaz@gmail.com', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: data
+    });
+
+    // IMPORTANT: Check if the server actually accepted the request
+    if (!response.ok) {
+      throw new Error(`Server responded with ${response.status}`);
+    }
+
+    // --- SUCCESS ---
+    btn.textContent = '✓ Message Sent!';
+    btn.style.background = 'var(--green)';
+    contactForm.reset();
+
+    setTimeout(() => {
+      btn.textContent = original;
+      btn.disabled = false;
+      btn.style.background = '';
+    }, 3000);
+
+  } catch (error) {
+    // --- FAILURE ---
+    console.error('Form error:', error);
+    btn.textContent = '✗ Failed. Try again.';
+    btn.style.background = '#ff4444'; // Red error color
+    btn.disabled = false; // Re-enable so they can click again
+
+    setTimeout(() => {
+      btn.textContent = original;
+      btn.style.background = '';
+    }, 4000);
+  }
+});
+
   // Play animation first
   btn.textContent = 'Sending...';
   btn.disabled = true;
