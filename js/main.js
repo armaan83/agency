@@ -90,9 +90,23 @@ if (counterElements.length > 0) {
         counterObserver.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.5 });
+  }, { threshold: 0.1 }); // Changed from 0.5 to 0.1 – fires much sooner
+
   counterElements.forEach(el => counterObserver.observe(el));
+
+  // ⚡ SAFETY NET: If counters are already visible, trigger them after 500ms
+  setTimeout(() => {
+    counterElements.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        animateCounter(el);
+        counterObserver.unobserve(el);
+      }
+    });
+  }, 500);
 }
+
+
 
 // ─── CONTACT FORM (with full error handling) ───
 const contactForm = document.getElementById('contactForm');
