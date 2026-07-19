@@ -79,9 +79,11 @@ nav.scrolled {
   border-radius: 10px;
   display: flex; align-items: center; justify-content: center;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
-.nav-logo-mark img { width: 38px; height: 38px; border-radius: 10px; display: block; }
+.nav-logo-mark img { width: 38px; height: 38px; border-radius: 10px; display: block; filter: drop-shadow(0 0 8px rgba(255,77,0,0.55)); }
+.nav-logo-text { transition: text-shadow 0.3s; }
+.nav-logo:hover .nav-logo-text { text-shadow: 0 0 14px rgba(255,77,0,0.35); }
 
 .nav-logo-mark::after {
   content: '';

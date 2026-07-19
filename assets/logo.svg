@@ -4,9 +4,15 @@
       <stop offset="0%" stop-color="#ff8c00"/>
       <stop offset="100%" stop-color="#ff4d00"/>
     </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
   </defs>
-  <rect x="6" y="6" width="108" height="108" rx="28" fill="url(#gmGrad)"/>
-  <g fill="#ffffff" font-family="'Syne','DM Sans',Arial,sans-serif" font-weight="800">
-    <text x="60" y="78" font-size="58" text-anchor="middle" letter-spacing="-2">GT</text>
-  </g>
+  <!-- glow ring -->
+  <rect x="6" y="6" width="108" height="108" rx="30" fill="none" stroke="url(#gmGrad)" stroke-width="3" opacity="0.55" filter="url(#glow)"/>
+  <!-- tile -->
+  <rect x="14" y="14" width="92" height="92" rx="24" fill="url(#gmGrad)"/>
+  <!-- GT monogram -->
+  <text x="60" y="80" font-family="'Syne','DM Sans',Arial,sans-serif" font-size="54" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="-2">GT</text>
 </svg>
