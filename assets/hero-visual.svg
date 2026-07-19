@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 620" width="560" height="620" role="img" aria-label="GM-Trendify creator growth">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0e0e12"/>
+      <stop offset="100%" stop-color="#16161c"/>
+    </linearGradient>
+    <linearGradient id="orange" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff8c00"/>
+      <stop offset="100%" stop-color="#ff4d00"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#00e5a0"/>
+      <stop offset="100%" stop-color="#00b386"/>
+    </linearGradient>
+    <linearGradient id="purple" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#b388ff"/>
+      <stop offset="100%" stop-color="#9b6dff"/>
+    </linearGradient>
+    <linearGradient id="phone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1f1f27"/>
+      <stop offset="100%" stop-color="#101015"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="14" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- backdrop -->
+  <rect width="560" height="620" rx="28" fill="url(#bg)"/>
+  <circle cx="430" cy="120" r="150" fill="url(#orange)" opacity="0.10" filter="url(#glow)"/>
+  <circle cx="120" cy="520" r="140" fill="url(#purple)" opacity="0.10" filter="url(#glow)"/>
+
+  <!-- grid lines -->
+  <g stroke="#ffffff" stroke-opacity="0.04">
+    <line x1="0" y1="155" x2="560" y2="155"/>
+    <line x1="0" y1="310" x2="560" y2="310"/>
+    <line x1="0" y1="465" x2="560" y2="465"/>
+    <line x1="140" y1="0" x2="140" y2="620"/>
+    <line x1="280" y1="0" x2="280" y2="620"/>
+    <line x1="420" y1="0" x2="420" y2="620"/>
+  </g>
+
+  <!-- phone -->
+  <g>
+    <rect x="180" y="120" width="200" height="380" rx="34" fill="url(#phone)" stroke="#2a2a33" stroke-width="2"/>
+    <rect x="194" y="138" width="172" height="300" rx="18" fill="#0c0c10"/>
+    <!-- video thumbnail -->
+    <rect x="206" y="150" width="148" height="170" rx="12" fill="#1a1a22"/>
+    <circle cx="280" cy="235" r="30" fill="url(#orange)" opacity="0.95"/>
+    <path d="M271 222 L295 235 L271 248 Z" fill="#fff"/>
+    <!-- caption bars -->
+    <rect x="206" y="338" width="120" height="9" rx="4" fill="#2c2c36"/>
+    <rect x="206" y="356" width="90" height="9" rx="4" fill="#23232b"/>
+    <!-- progress -->
+    <rect x="206" y="392" width="148" height="6" rx="3" fill="#2c2c36"/>
+    <rect x="206" y="392" width="92" height="6" rx="3" fill="url(#orange)"/>
+    <!-- bottom bar -->
+    <rect x="206" y="414" width="148" height="14" rx="7" fill="#181820"/>
+    <circle cx="222" cy="421" r="5" fill="#3a3a45"/>
+    <circle cx="246" cy="421" r="5" fill="#3a3a45"/>
+  </g>
+
+  <!-- floating card: followers -->
+  <g transform="translate(40,200)">
+    <rect width="150" height="74" rx="16" fill="#14141a" stroke="#26262f"/>
+    <circle cx="34" cy="37" r="20" fill="url(#purple)" opacity="0.9"/>
+    <path d="M27 37 l5 5 l9 -10" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="64" y="32" fill="#f5f3ef" font-family="DM Sans, Arial" font-size="18" font-weight="700">+12.4k</text>
+    <text x="64" y="52" fill="#8a8a8a" font-family="DM Sans, Arial" font-size="11">Followers</text>
+  </g>
+
+  <!-- floating card: earnings -->
+  <g transform="translate(370,250)">
+    <rect width="150" height="74" rx="16" fill="#14141a" stroke="#26262f"/>
+    <circle cx="34" cy="37" r="20" fill="url(#green)" opacity="0.9"/>
+    <text x="34" y="44" fill="#06281f" font-family="DM Sans, Arial" font-size="20" font-weight="800" text-anchor="middle">$</text>
+    <text x="64" y="32" fill="#f5f3ef" font-family="DM Sans, Arial" font-size="18" font-weight="700">$8,200</text>
+    <text x="64" y="52" fill="#8a8a8a" font-family="DM Sans, Arial" font-size="11">This month</text>
+  </g>
+
+  <!-- floating card: likes -->
+  <g transform="translate(60,400)">
+    <rect width="140" height="70" rx="16" fill="#14141a" stroke="#26262f"/>
+    <path d="M28 44 l-9 -12 a8 8 0 0 1 13 -3 l3 4 l3 -4 a8 8 0 0 1 13 3 l-9 12 z" fill="url(#orange)"/>
+    <text x="58" y="32" fill="#f5f3ef" font-family="DM Sans, Arial" font-size="17" font-weight="700">48.1k</text>
+    <text x="58" y="50" fill="#8a8a8a" font-family="DM Sans, Arial" font-size="11">Likes</text>
+  </g>
+
+  <!-- growth arrow -->
+  <g transform="translate(300,470)">
+    <path d="M0 90 C 40 60, 70 70, 100 30 S 170 10, 200 -30" fill="none" stroke="url(#green)" stroke-width="6" stroke-linecap="round"/>
+    <path d="M185 -38 l18 6 l-6 18" fill="none" stroke="url(#green)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="0" cy="90" r="7" fill="url(#green)"/>
+  </g>
+
+  <!-- sparkles -->
+  <g fill="#ff8c00">
+    <path d="M470 110 l4 10 l10 4 l-10 4 l-4 10 l-4 -10 l-10 -4 l10 -4 z"/>
+    <path d="M120 120 l3 7 l7 3 l-7 3 l-3 7 l-3 -7 l-7 -3 l7 -3 z" opacity="0.8"/>
+  </g>
+  <g fill="#9b6dff">
+    <path d="M500 470 l3 8 l8 3 l-8 3 l-3 8 l-3 -8 l-8 -3 l8 -3 z"/>
+  </g>
+</svg>
