@@ -1,18 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="GM-Trendify logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="GM-Trendify">
   <defs>
-    <linearGradient id="gmGrad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#ff8c00"/>
-      <stop offset="100%" stop-color="#ff4d00"/>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffb347"/>
+      <stop offset="55%" stop-color="#ff7a00"/>
+      <stop offset="100%" stop-color="#ff3d00"/>
     </linearGradient>
-    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="3.5" result="b"/>
-      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="60%" stop-color="#ff6a00" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#ff6a00" stop-opacity="0.55"/>
+    </radialGradient>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="2.2"/>
     </filter>
   </defs>
-  <!-- glow ring -->
-  <rect x="6" y="6" width="108" height="108" rx="30" fill="none" stroke="url(#gmGrad)" stroke-width="3" opacity="0.55" filter="url(#glow)"/>
+
+  <!-- animated outer glow halo (pulsing) -->
+  <circle cx="60" cy="60" r="56" fill="url(#halo)">
+    <animate attributeName="r" values="50;58;50" dur="2.4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.35;0.75;0.35" dur="2.4s" repeatCount="indefinite"/>
+  </circle>
+
   <!-- tile -->
-  <rect x="14" y="14" width="92" height="92" rx="24" fill="url(#gmGrad)"/>
-  <!-- GT monogram -->
-  <text x="60" y="80" font-family="'Syne','DM Sans',Arial,sans-serif" font-size="54" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="-2">GT</text>
+  <rect x="14" y="14" width="92" height="92" rx="26" fill="url(#g)">
+    <animate attributeName="opacity" values="1;0.82;1;0.9;1" dur="3.2s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- subtle inner highlight -->
+  <rect x="14" y="14" width="92" height="92" rx="26" fill="none" stroke="#fff" stroke-opacity="0.25" stroke-width="1.5"/>
+
+  <!-- GT monogram with flickering glow -->
+  <text x="60" y="82" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="900" fill="#fff" text-anchor="middle" letter-spacing="-3" filter="url(#soft)">
+    GT
+    <animate attributeName="fill-opacity" values="1;0.7;1;0.85;1" dur="2.8s" repeatCount="indefinite"/>
+  </text>
 </svg>
