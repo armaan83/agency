@@ -75,15 +75,13 @@ nav.scrolled {
 
 .nav-logo-mark {
   width: 38px; height: 38px;
-  background: var(--accent);
+  background: transparent;
   border-radius: 10px;
   display: flex; align-items: center; justify-content: center;
-  font-family: var(--font-display);
-  font-weight: 800; font-size: 18px;
-  color: #fff;
   position: relative;
   overflow: hidden;
 }
+.nav-logo-mark img { width: 38px; height: 38px; border-radius: 10px; display: block; }
 
 .nav-logo-mark::after {
   content: '';
