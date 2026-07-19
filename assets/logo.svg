@@ -1,4 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="GM-Trendify">
-  <rect x="8" y="8" width="104" height="104" rx="28" fill="#ff6a00"/>
+  <!-- base shadow for 3D lift -->
+  <rect x="10" y="14" width="100" height="100" rx="26" fill="#c23a00"/>
+  <!-- top face -->
+  <rect x="8" y="8" width="100" height="100" rx="26" fill="#ff6a00"/>
+  <!-- glossy highlight -->
+  <path d="M8 34 Q8 8 34 8 L86 8 Q112 8 112 34 L112 40 Q60 26 8 40 Z" fill="#ffae66" opacity="0.55"/>
+  <!-- GT monogram -->
   <text x="60" y="84" font-family="Arial, Helvetica, sans-serif" font-size="60" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="-3">GT</text>
 </svg>

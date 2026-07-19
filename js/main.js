@@ -154,3 +154,19 @@ if (contactForm) {
     }
   });
 }
+
+// ─── 3D TILT ON CARDS ───
+const tiltEls = document.querySelectorAll('.service-card, .testimonial-card, .feature-visual, .hero-stat-card');
+tiltEls.forEach((el) => {
+  const max = 12; // max degrees
+  el.style.transformStyle = 'preserve-3d';
+  el.addEventListener('mousemove', (e) => {
+    const r = el.getBoundingClientRect();
+    const px = (e.clientX - r.left) / r.width - 0.5;
+    const py = (e.clientY - r.top) / r.height - 0.5;
+    el.style.transform = `perspective(900px) rotateY(${px * max}deg) rotateX(${-py * max}deg) translateY(-6px)`;
+  });
+  el.addEventListener('mouseleave', () => {
+    el.style.transform = 'perspective(900px) rotateY(0) rotateX(0) translateY(0)';
+  });
+});
